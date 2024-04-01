@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  padding-top: 72px;
+  overflow-x: hidden;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#navbar {
+  width: 100%;
+  background-color: hsl(240, 100%, 27%);
+  color: white;
+  font-size: 1.35rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+#navbar ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#navbar ul li {
+  padding: 20px 30px;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+.container #welcome-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: calc(100vh - 75px);
+  padding: 200px 0;
+  background-color: #2f4f4f;
+}
+
+.container #welcome-section img {
+  width: 12vw;
+  height: 13vw;
+  border-radius: 50%;
+}
+
+.container #welcome-section h1 {
+  font-size: 3rem;
+  color: white;
+  text-align: center;
+}
+
+.container #welcome-section p {
+  color: #ffa500;
+  font-size: 1.5rem;
+  font-style: italic;
+}
+
+.container #projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #45567d;
+  margin: 0 auto;
+}
+
+.container #projects h2 {
+  max-width: 640px;
+  margin: 0 auto;
+  color: white;
+  font-size: 2.5rem;
+  padding: 60px 0 10px 0;
+  text-align: center;
+  border-bottom: 2px solid white;
+}
+
+.container #projects .projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2.5rem;
+  width: 100%;
+  max-width: 1280px;
+  margin: 50px auto 10px;
+  padding-bottom: 40px;
+}
+
+.container #projects .projects-grid .project-tile {
+  background-color: #303841;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #303841;
+  min-height: 500px;
+  transition: 0.3s;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.container #projects .projects-grid .project-tile .project-img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.container #projects .projects-grid .project-tile .project-title {
+  color: white;
+  text-align: center;
+  font-size: 1.25rem;
+  text-decoration: none;
+  padding: 15px 0;
+}
+
+.container #projects .projects-grid .project-tile:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 5px 1px rgb(101, 96, 246);
+}
+
+.container #projects .btn {
+  display: block;
+  width: 170px;
+  height: 50px;
+  line-height: 50px;
+  margin: 0 auto 50px;
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+  background-color: #303841;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+.container #projects .btn:hover {
+  background-color: #0000be;
+}
+
+.container #contact {
+  background-color: #303841;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: 100vh;
+}
+
+.container #contact .contact-section-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.container #contact .contact-section-header h2 {
+  font-size: 4rem;
+  letter-spacing: 2px;
+}
+
+.container #contact .contact-section-header p {
+  font-style: italic;
+  font-size: 1.2rem;
+}
+
+.container #contact .contact-links {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  font-size: 1.5rem;
+  margin: 50px auto 10px;
+  text-align: center;
+}
+
+.container #contact .contact-links a {
+  transition: transform 0.3s ease-out;
+}
+
+.container #contact .contact-links a:hover {
+  transform: translateY(8px);
+}
+
+.container footer {
+  border-top: 5px solid #be3144;
+  background-color: #303841;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.container footer p {
+  padding: 50px 30px;
+  color: white;
+  font-size: 1.1rem;
+}
+
+@media only screen and (max-width: 700px) {
+  .container #contact .contact-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    font-size: 1.5rem;
+    margin: 50px auto 10px;
+    gap: 10px;
+  }
+}
+
+@media only screen and (max-width: 376px) {
+  .container #projects h2 {
+    font-size: 1.3rem;
+  }
+  .container #contact .contact-section-header h2,
+  .container #welcome-section h1 {
+    font-size: 2rem;
+  }
+}
